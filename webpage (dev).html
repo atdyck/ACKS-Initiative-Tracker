@@ -1,0 +1,344 @@
+<html>
+<head>
+<title>ACKS Initiative Tracker</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<div style="position:relative;min-width:960px">
+</div>
+<h1>ACKS Initiative Tracker</h1>
+<p>For easily rolling initiative in the <i>Adventurer Conqueror King System</i>. Put in a name and mod, then click Calculate.</p>
+<br>
+<table>
+<tbody>
+	<tr>
+		<th>Name</th>
+		<th>Mod</th>
+		<th>Result</th>
+		<th>Dead</th>
+	</tr>
+	<tr>
+		<td><input type="text" id="textBoxName1" value=""></td>
+		<td><input type="number" id="spinnerMods1" style="width: 4em"></td>
+		<td><input id="textBoxInit1" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox1"></td>
+	</tr>
+	<tr>
+		<td><input type="text" id="textBoxName2" value=""></td>
+		<td><input type="number" id="spinnerMods2" style="width: 4em"></td>
+		<td><input id="textBoxInit2" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox2"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName3" value=""></td>
+		<td><input type="number" id="spinnerMods3" style="width: 4em"></td>
+		<td><input id="textBoxInit3" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox3"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName4" value=""></td>
+		<td><input type="number" id="spinnerMods4" style="width: 4em"></td>
+		<td><input id="textBoxInit4" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox4"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName5" value=""></td>
+		<td><input type="number" id="spinnerMods5" style="width: 4em"></td>
+		<td><input id="textBoxInit5" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox5"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName6" value=""></td>
+		<td><input type="number" id="spinnerMods6" style="width: 4em"></td>
+		<td><input id="textBoxInit6" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox6"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName7" value=""></td>
+		<td><input type="number" id="spinnerMods7" style="width: 4em"></td>
+		<td><input id="textBoxInit7" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox7"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName8" value=""></td>
+		<td><input type="number" id="spinnerMods8" style="width: 4em"></td>
+		<td><input id="textBoxInit8" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox8"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName9" value=""></td>
+		<td><input type="number" id="spinnerMods9" style="width: 4em"></td>
+		<td><input id="textBoxInit9" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox9"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName10" value=""></td>
+		<td><input type="number" id="spinnerMods10" style="width: 4em"></td>
+		<td><input id="textBoxInit10" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox10"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName11" value=""></td>
+		<td><input type="number" id="spinnerMods11" style="width: 4em"></td>
+		<td><input id="textBoxInit11" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox11"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName12" value=""></td>
+		<td><input type="number" id="spinnerMods12" style="width: 4em"></td>
+		<td><input id="textBoxInit12" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox12"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName13" value=""></td>
+		<td><input type="number" id="spinnerMods13" style="width: 4em"></td>
+		<td><input id="textBoxInit13" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox13"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName14" value=""></td>
+		<td><input type="number" id="spinnerMods14" style="width: 4em"></td>
+		<td><input id="textBoxInit14" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox14"></td>
+	</tr>
+<tr>
+		<td><input type="text" id="textBoxName15" value=""></td>
+		<td><input type="number" id="spinnerMods15" style="width: 4em"></td>
+		<td><input id="textBoxInit15" value="" size="3" readonly></td>
+		<td style="text-align:center"><input type="checkbox" id="deadBox15"></td>
+	</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr><td><button id="calculate" onclick="Calculate()">Calculate</button></td>
+<td><button id="save" onclick="setCookie()">Save</button></td>
+<td><button id="load" onclick="retrieveCookie()">Load</button></td>
+<td><button id="reset" onclick="reset()">Reset form</button></td></tr>
+</table>
+<br>
+<br>
+<p>&copy; Copyright 2019 Ashton Dyck. All rights reserved.</p>
+<table id="outputTable" cellspacing="0" style="left: 350px; top: 122px; position: absolute;"><tbody>
+	<tr><th><b>Output</b></th></tr>
+	<tr><td><textarea id="output" rows="16" cols="22"readonly></textarea></td></tr>
+</tbody></table>
+
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+<script>
+function Calculate()
+{
+    //Clear Output box
+	document.getElementById("output").innerHTML = "";
+
+	//Create a new list
+	var initList = [];
+
+	//Use the Roll method 15 times, one for each line on the form. Subsequently adds each result to the array.
+	var result1 = Roll(document.getElementById("textBoxName1"), document.getElementById("spinnerMods1"), document.getElementById("textBoxInit1"), document.getElementById("deadBox1"));
+	if (result1 != undefined) { initList.push(result1); }
+			
+	var result2 = Roll(textBoxName2, spinnerMods2, textBoxInit2, deadBox2);
+	if (result2 != undefined) { initList.push(result2); }
+            
+	var result3 = Roll(textBoxName3, spinnerMods3, textBoxInit3, deadBox3);
+	if (result3 != undefined) { initList.push(result3); }
+            
+	var result4 = Roll(textBoxName4, spinnerMods4, textBoxInit4, deadBox4);
+    if (result4 != undefined) { initList.push(result4); }
+            
+	var result5 = Roll(textBoxName5, spinnerMods5, textBoxInit5, deadBox5);
+    if (result5 != undefined) { initList.push(result5); }
+            
+	var result6 = Roll(textBoxName6, spinnerMods6, textBoxInit6, deadBox6);
+    if (result6 != undefined) { initList.push(result6); }
+            
+	var result7 = Roll(textBoxName7, spinnerMods7, textBoxInit7, deadBox7);
+    if (result7 != undefined) { initList.push(result7); }
+            
+	var result8 = Roll(textBoxName8, spinnerMods8, textBoxInit8, deadBox8);
+    if (result8 != undefined) { initList.push(result8); }
+            
+	var result9 = Roll(textBoxName9, spinnerMods9, textBoxInit9, deadBox9);
+    if (result9 != undefined) { initList.push(result9); }
+            
+	var result10 = Roll(textBoxName10, spinnerMods10, textBoxInit10, deadBox10);
+    if (result10 != undefined) { initList.push(result10); }
+            
+	var result11 = Roll(textBoxName11, spinnerMods11, textBoxInit11, deadBox11);
+    if (result11 != undefined) { initList.push(result11); }
+            
+	var result12 = Roll(textBoxName12, spinnerMods12, textBoxInit12, deadBox12);
+    if (result12 != undefined) { initList.push(result12); }
+            
+	var result13 = Roll(textBoxName13, spinnerMods13, textBoxInit13, deadBox13);
+    if (result13 != undefined) { initList.push(result13); }
+            
+	var result14 = Roll(textBoxName14, spinnerMods14, textBoxInit14, deadBox14);
+    if (result14 != undefined) { initList.push(result14); }
+            
+	var result15 = Roll(textBoxName15, spinnerMods15, textBoxInit15, deadBox15);
+    if (result15 != undefined) { initList.push(result15); }
+
+
+    //Sorts list by init, which is the initiative number
+    initList = initList.sort(function(a, b){return b.init - a.init});
+	
+	var printList = initList.map(merge);
+	
+	
+	function merge(thing){ 
+		thing = thing.init + " " + thing.name;
+		return thing; }
+
+    //Prints each item in the list to the Output box
+	document.getElementById("output").innerHTML = printList.join("\n");
+}
+
+
+
+
+function Roll(nameBox, modBox, initBox, deadBox) {
+  if (deadBox.checked != true && nameBox.value != "") 
+		{
+		//Roll the intiative, print it to the appropriate box, and return the initiative coupled with the character's name
+		var initiative = (Math.floor((Math.random() * 6) + 1) + Number(modBox.value));
+		initBox.value = initiative.toString();
+		var fullInfo = {name: nameBox.value, init: initiative};
+		return fullInfo;
+		}
+	//If there is no name, the method output will be set to undefined
+  else
+		{
+		initBox.value = "";
+		return undefined;
+		}
+}
+
+function setCookie() {
+
+name1 = document.getElementById("textBoxName1").value;
+mod1 = document.getElementById("spinnerMods1").value;
+check1 = document.getElementById("deadBox1").checked;
+name2 = document.getElementById("textBoxName2").value;
+mod2 = document.getElementById("spinnerMods2").value;
+check2 = document.getElementById("deadBox2").checked;
+name3 = document.getElementById("textBoxName3").value;
+mod3 = document.getElementById("spinnerMods3").value;
+check3 = document.getElementById("deadBox3").checked;
+name4 = document.getElementById("textBoxName4").value;
+mod4 = document.getElementById("spinnerMods4").value;
+check4 = document.getElementById("deadBox4").checked;
+name5 = document.getElementById("textBoxName5").value;
+mod5 = document.getElementById("spinnerMods5").value;
+check5 = document.getElementById("deadBox5").checked;
+name6 = document.getElementById("textBoxName6").value;
+mod6 = document.getElementById("spinnerMods6").value;
+check6 = document.getElementById("deadBox6").checked;
+name7 = document.getElementById("textBoxName7").value;
+mod7 = document.getElementById("spinnerMods7").value;
+check7 = document.getElementById("deadBox7").checked;
+name8 = document.getElementById("textBoxName8").value;
+mod8 = document.getElementById("spinnerMods8").value;
+check8 = document.getElementById("deadBox8").checked;
+name9 = document.getElementById("textBoxName9").value;
+mod9 = document.getElementById("spinnerMods9").value;
+check9 = document.getElementById("deadBox9").checked;
+name10 = document.getElementById("textBoxName10").value;
+mod10 = document.getElementById("spinnerMods10").value;
+check10 = document.getElementById("deadBox10").checked;
+name11 = document.getElementById("textBoxName11").value;
+mod11 = document.getElementById("spinnerMods11").value;
+check11 = document.getElementById("deadBox11").checked;
+name12 = document.getElementById("textBoxName12").value;
+mod12 = document.getElementById("spinnerMods12").value;
+check12 = document.getElementById("deadBox12").checked;
+name13 = document.getElementById("textBoxName13").value;
+mod13 = document.getElementById("spinnerMods13").value;
+check13 = document.getElementById("deadBox13").checked;
+name14 = document.getElementById("textBoxName14").value;
+mod14 = document.getElementById("spinnerMods14").value;
+check14 = document.getElementById("deadBox14").checked;
+name15 = document.getElementById("textBoxName15").value;
+mod15 = document.getElementById("spinnerMods15").value;
+check15 = document.getElementById("deadBox15").checked;
+
+var mashup = [name1, mod1, check1, name2, mod2, check2, name3, mod3, check3, name4, mod4, check4, name5, mod5, check5, name6, mod6, check6, name7, mod7, check7, name8, mod8, check8, name9, mod9, check9, name10, mod10, check10, name11, mod11, check11, name12, mod12, check12, name13, mod13, check13, name14, mod14, check14, name15, mod15, check15];
+console.log(mashup);
+
+Cookies.set("name", JSON.stringify(mashup), {expires: 90});
+console.log(document.cookie);
+
+}
+
+function retrieveCookie(){
+var list = Cookies.getJSON("name");
+console.log(list);
+
+document.getElementById("textBoxName1").value = list.shift();
+document.getElementById("spinnerMods1").value = list.shift();
+document.getElementById("deadBox1").checked = list.shift();
+document.getElementById("textBoxName2").value = list.shift();
+document.getElementById("spinnerMods2").value = list.shift();
+document.getElementById("deadBox2").checked = list.shift();
+document.getElementById("textBoxName3").value = list.shift();
+document.getElementById("spinnerMods3").value = list.shift();
+document.getElementById("deadBox3").checked = list.shift();
+document.getElementById("textBoxName4").value = list.shift();
+document.getElementById("spinnerMods4").value = list.shift();
+document.getElementById("deadBox4").checked = list.shift();
+document.getElementById("textBoxName5").value = list.shift();
+document.getElementById("spinnerMods5").value = list.shift();
+document.getElementById("deadBox5").checked = list.shift();
+document.getElementById("textBoxName6").value = list.shift();
+document.getElementById("spinnerMods6").value = list.shift();
+document.getElementById("deadBox6").checked = list.shift();
+document.getElementById("textBoxName7").value = list.shift();
+document.getElementById("spinnerMods7").value = list.shift();
+document.getElementById("deadBox7").checked = list.shift();
+document.getElementById("textBoxName8").value = list.shift();
+document.getElementById("spinnerMods8").value = list.shift();
+document.getElementById("deadBox8").checked = list.shift();
+document.getElementById("textBoxName9").value = list.shift();
+document.getElementById("spinnerMods9").value = list.shift();
+document.getElementById("deadBox9").checked = list.shift();
+document.getElementById("textBoxName10").value = list.shift();
+document.getElementById("spinnerMods10").value = list.shift();
+document.getElementById("deadBox10").checked = list.shift();
+document.getElementById("textBoxName11").value = list.shift();
+document.getElementById("spinnerMods11").value = list.shift();
+document.getElementById("deadBox11").checked = list.shift();
+document.getElementById("textBoxName12").value = list.shift();
+document.getElementById("spinnerMods12").value = list.shift();
+document.getElementById("deadBox12").checked = list.shift();
+document.getElementById("textBoxName13").value = list.shift();
+document.getElementById("spinnerMods13").value = list.shift();
+document.getElementById("deadBox13").checked = list.shift();
+document.getElementById("textBoxName14").value = list.shift();
+document.getElementById("spinnerMods14").value = list.shift();
+document.getElementById("deadBox14").checked = list.shift();
+document.getElementById("textBoxName15").value = list.shift();
+document.getElementById("spinnerMods15").value = list.shift();
+document.getElementById("deadBox15").checked = list.shift();
+}
+
+function reset(){
+	var elements = document.getElementsByTagName("input");
+	for (var ii=0; ii < elements.length; ii++){
+		if (elements[ii].type == "checkbox"){
+			elements[ii].checked = false;}
+		else {
+		elements[ii].value = "";}
+	}
+}
+
+//To do: Add "clear" button
+//Change submit button to "submit" type button
+//Change form into a true "form" type
+//Shorten code with "each" and stuff like that
+</script>
+
+
+</body>
+</html>
