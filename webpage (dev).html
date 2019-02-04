@@ -138,57 +138,57 @@ function Calculate()
 	//Use the Roll method 15 times, one for each line on the form. Subsequently adds each result to the array.
 	var result1 = Roll(document.getElementById("textBoxName1"), document.getElementById("spinnerMods1"), document.getElementById("textBoxInit1"), document.getElementById("deadBox1"));
 	if (result1 != undefined) { initList.push(result1); }
-			
+
 	var result2 = Roll(textBoxName2, spinnerMods2, textBoxInit2, deadBox2);
 	if (result2 != undefined) { initList.push(result2); }
-            
+
 	var result3 = Roll(textBoxName3, spinnerMods3, textBoxInit3, deadBox3);
 	if (result3 != undefined) { initList.push(result3); }
-            
+
 	var result4 = Roll(textBoxName4, spinnerMods4, textBoxInit4, deadBox4);
     if (result4 != undefined) { initList.push(result4); }
-            
+
 	var result5 = Roll(textBoxName5, spinnerMods5, textBoxInit5, deadBox5);
     if (result5 != undefined) { initList.push(result5); }
-            
+
 	var result6 = Roll(textBoxName6, spinnerMods6, textBoxInit6, deadBox6);
     if (result6 != undefined) { initList.push(result6); }
-            
+
 	var result7 = Roll(textBoxName7, spinnerMods7, textBoxInit7, deadBox7);
     if (result7 != undefined) { initList.push(result7); }
-            
+
 	var result8 = Roll(textBoxName8, spinnerMods8, textBoxInit8, deadBox8);
     if (result8 != undefined) { initList.push(result8); }
-            
+
 	var result9 = Roll(textBoxName9, spinnerMods9, textBoxInit9, deadBox9);
     if (result9 != undefined) { initList.push(result9); }
-            
+
 	var result10 = Roll(textBoxName10, spinnerMods10, textBoxInit10, deadBox10);
     if (result10 != undefined) { initList.push(result10); }
-            
+
 	var result11 = Roll(textBoxName11, spinnerMods11, textBoxInit11, deadBox11);
     if (result11 != undefined) { initList.push(result11); }
-            
+
 	var result12 = Roll(textBoxName12, spinnerMods12, textBoxInit12, deadBox12);
     if (result12 != undefined) { initList.push(result12); }
-            
+
 	var result13 = Roll(textBoxName13, spinnerMods13, textBoxInit13, deadBox13);
     if (result13 != undefined) { initList.push(result13); }
-            
+
 	var result14 = Roll(textBoxName14, spinnerMods14, textBoxInit14, deadBox14);
     if (result14 != undefined) { initList.push(result14); }
-            
+
 	var result15 = Roll(textBoxName15, spinnerMods15, textBoxInit15, deadBox15);
     if (result15 != undefined) { initList.push(result15); }
 
 
     //Sorts list by init, which is the initiative number
     initList = initList.sort(function(a, b){return b.init - a.init});
-	
+
 	var printList = initList.map(merge);
-	
-	
-	function merge(thing){ 
+
+
+	function merge(thing){
 		thing = thing.init + " " + thing.name;
 		return thing; }
 
@@ -200,7 +200,7 @@ function Calculate()
 
 
 function Roll(nameBox, modBox, initBox, deadBox) {
-  if (deadBox.checked != true && nameBox.value != "") 
+  if (deadBox.checked != true && nameBox.value != "")
 		{
 		//Roll the intiative, print it to the appropriate box, and return the initiative coupled with the character's name
 		var initiative = (Math.floor((Math.random() * 6) + 1) + Number(modBox.value));
