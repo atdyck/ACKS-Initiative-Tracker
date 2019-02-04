@@ -2,6 +2,11 @@
 <head>
 <title>ACKS Initiative Tracker</title>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style>
+	.table-holder {
+		float: left;
+	}
+</style>
 </head>
 <body>
 <div style="position:relative;min-width:960px">
@@ -9,6 +14,7 @@
 <h1>ACKS Initiative Tracker</h1>
 <p>For easily rolling initiative in the <i>Adventurer Conqueror King System</i>. Put in a name and mod, then click Calculate.</p>
 <br>
+<div class="table-holder">
 <table>
 <tbody>
 	<tr>
@@ -119,10 +125,13 @@
 <br>
 <br>
 <p>&copy; Copyright 2019 Ashton Dyck. All rights reserved.</p>
-<table id="outputTable" cellspacing="0" style="left: 350px; top: 122px; position: absolute;"><tbody>
+</div>
+<div class="table-holder">
+<table id="outputTable"><tbody>
 	<tr><th><b>Output</b></th></tr>
 	<tr><td><textarea id="output" rows="16" cols="22"readonly></textarea></td></tr>
 </tbody></table>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
@@ -333,7 +342,6 @@ function reset(){
 	}
 }
 
-//To do: Add "clear" button
 //Change submit button to "submit" type button
 //Change form into a true "form" type
 //Shorten code with "each" and stuff like that
